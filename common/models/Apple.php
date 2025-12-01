@@ -70,7 +70,7 @@ class Apple extends ActiveRecord
 
     private function generateRandomCreationTime()
     {
-        $oneMonthAgo = strtotime('-1 month'); // Яблоки могли появиться в течение последнего месяца
+        $oneMonthAgo = strtotime('-1 month');
         return rand($oneMonthAgo, time());
     }
 
@@ -83,7 +83,7 @@ class Apple extends ActiveRecord
 
     public function getStatusText()
     {
-        if ($this->isRotten()) { // Динамическая проверка на гниль всегда актуальна
+        if ($this->isRotten()) {
             return 'Гнилое';
         }
 
